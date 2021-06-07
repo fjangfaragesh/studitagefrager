@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Speedfriending Fragengenerator</title>
+    <script type="text/javascript">
+function randomQuestion() {
+    let outpt = document.getElementById("outpt");
+    outpt.innerHTML = "";
+    outpt.appendChild(document.createTextNode(QUESTIONS[Math.floor(Math.random()*QUESTIONS.length]));
+}
+      
+    </script>
+    <script type="text/javascript" src="fragen.js"></script>
+  </head>
+  <body>
+    <p id="outpt"></p>
+    <input type="button" onclick="randomQuestion()" value="Zufällige Frage"/>
+  </body>
+</html>

@@ -1,2 +1,2 @@
 # studitagefrager
-[Webseite hier](https://github.com/fjangfaragesh/studitagefrager/blob/main/index.html)
+[Webseite hier](https://fjangfaragesh.github.io/studitagefrager/)

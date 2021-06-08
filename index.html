@@ -2,6 +2,23 @@
   <head>
     <meta charset="utf-8"/>
     <title>Speedfriending Fragengenerator</title>
+    <style>
+      .knopp {
+        width:50%;
+        background-color: #ee7711;
+        border:none;
+        border-radius:5px;
+        font-size:30;
+        padding:10px; 
+        transition: 0.5s
+      }
+      knopp:hover {
+        background-color: #ff6611;
+      }
+      knopp:active {
+        background-color: #ff4400;
+      }
+    </style>
     <script type="text/javascript">
 function randomQuestion() {
     let outpt = document.getElementById("outpt");
@@ -14,7 +31,7 @@ function randomQuestion() {
   </head>
   <body style="margin:0px; padding:0px; font-size:40">
     <div style="max-width:100%; text-align:center; padding:20% 0 0 0; vertical-align: middle; ">
-      <input type="button" onclick="randomQuestion()" value="Zufällige Frage" style="width:50%; background-color: orange; border:none; border-radius:20px; font-size:30" />
+      <input type="button" onclick="randomQuestion()" value="Zufällige Frage" class="knopp"/>
       <p id="outpt"></p>
     </div>
   </body>

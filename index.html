@@ -62,7 +62,7 @@ function randomQuestion() {
     let list = document.getElementById("listselect").value;
     let outpt = document.getElementById("outpt");
     outpt.classList.add("animationreset");
-    let q = QUESTIONS[list][Math.floor(Math.random()*QUESTIONS.length)];
+    let q = QUESTIONS[list][Math.floor(Math.random()*QUESTIONS[list].length)];
     setTimeout(function() {
       outpt.innerHTML = "";
       outpt.classList.remove("animationreset");

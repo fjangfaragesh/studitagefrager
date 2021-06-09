@@ -29,9 +29,10 @@
     </style>
     <script type="text/javascript">
 function randomQuestion() {
+    let list = document.getElementById("list").value;
     let outpt = document.getElementById("outpt");
     outpt.classList.add("animationreset");
-    let q = QUESTIONS[Math.floor(Math.random()*QUESTIONS.length)];
+    let q = QUESTIONS[list][Math.floor(Math.random()*QUESTIONS.length)];
     setTimeout(function() {
       outpt.innerHTML = "";
       outpt.classList.remove("animationreset");

@@ -19,10 +19,11 @@
         background-color: #ff0066;
       }
       .text {
-        transition: 0.5s
+        transition: 1s;
       }
       .text.animationreset {
-        opacity:0; 
+        opacity:0;
+        transition: 0.5s;
       }
       
     </style>
@@ -32,7 +33,7 @@ function randomQuestion() {
     outpt.classList.add("animationreset");
     outpt.innerHTML = "";
     outpt.appendChild(document.createTextNode(QUESTIONS[Math.floor(Math.random()*QUESTIONS.length)]));
-    outpt.classList.remove("animationreset");
+    setTimeout(function() {outpt.classList.remove("animationreset");},500);
 }
       
     </script>

@@ -10,20 +10,29 @@
         border-radius:15px;
         font-size:30;
         padding:10px; 
-        transition: 0.25s
+        transition: 0.15s
       }
       .knopp:hover {
-        background-color: #ffaa00;
+        background-color: #ff4400;
       }
       .knopp:active {
-        background-color: #ddcc00;
+        background-color: #ff0066;
       }
+      .text {
+        transition: 0.5s
+      }
+      .text.animationreset {
+        opacity:0; 
+      }
+      
     </style>
     <script type="text/javascript">
 function randomQuestion() {
     let outpt = document.getElementById("outpt");
+    outpt.classList.add("animationreset");
     outpt.innerHTML = "";
     outpt.appendChild(document.createTextNode(QUESTIONS[Math.floor(Math.random()*QUESTIONS.length)]));
+    outpt.classList.remove("animationreset");
 }
       
     </script>
@@ -32,7 +41,7 @@ function randomQuestion() {
   <body style="margin:0px; padding:0px; font-size:40">
     <div style="max-width:100%; text-align:center; padding:20% 0 0 0; vertical-align: middle; ">
       <input type="button" onclick="randomQuestion()" value="Zufällige Frage" class="knopp"/>
-      <p id="outpt"></p>
+      <p id="outpt" class="text"></p>
     </div>
   </body>
 </html>

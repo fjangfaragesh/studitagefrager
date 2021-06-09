@@ -18,6 +18,24 @@
       .knopp:active {
         background-color: #ff0066;
       }
+      .listselect {
+        top:0px; 
+        left:0px;
+        position:absolute;
+        background-color: #0066ff;
+        border:none;
+        border-radius:15px;
+        font-size:20;
+        padding:10px; 
+        transition: 0.15s
+      }
+      .listselect:hover {
+        background-color: #0044ff;
+      }
+      .listselect:active {
+        background-color: #6600ff;
+      }
+      
       .text {
         transition: 1s;
       }
@@ -28,8 +46,20 @@
       
     </style>
     <script type="text/javascript">
+onload = function() {
+  let ls = document.getElementById("listselect");
+  let kys = Object.keys(QUESTIONS);
+  for (let k of kys) {
+    let op = document.createElement("option");
+    op.appendChild(document.createTextNode(k));
+    op.value = k;
+    ls.appendChild(op);
+  }
+}
+      
+      
 function randomQuestion() {
-    let list = document.getElementById("list").value;
+    let list = document.getElementById("listselect").value;
     let outpt = document.getElementById("outpt");
     outpt.classList.add("animationreset");
     let q = QUESTIONS[list][Math.floor(Math.random()*QUESTIONS.length)];
@@ -44,6 +74,7 @@ function randomQuestion() {
     <script type="text/javascript" src="fragen.js"></script>
   </head>
   <body style="margin:0px; padding:0px; font-size:40">
+    <select class="listselect" id="listselect"></select>
     <div style="max-width:100%; text-align:center; padding:20% 0 0 0; vertical-align: middle; ">
       <input type="button" onclick="randomQuestion()" value="Zufällige Frage" class="knopp"/>
       <p id="outpt" class="text"></p>

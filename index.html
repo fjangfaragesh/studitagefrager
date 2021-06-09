@@ -32,8 +32,11 @@ function randomQuestion() {
     let outpt = document.getElementById("outpt");
     outpt.classList.add("animationreset");
     outpt.innerHTML = "";
-    outpt.appendChild(document.createTextNode(QUESTIONS[Math.floor(Math.random()*QUESTIONS.length)]));
-    setTimeout(function() {outpt.classList.remove("animationreset");},500);
+    let q = QUESTIONS[Math.floor(Math.random()*QUESTIONS.length)];
+    setTimeout(function() {
+      outpt.classList.remove("animationreset");
+      outpt.appendChild(document.createTextNode(q));
+    },500);
 }
       
     </script>

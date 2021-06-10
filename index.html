@@ -68,7 +68,7 @@ function randomQuestion() {
       outpt.innerHTML = "";
       outpt.classList.remove("animationreset");
       outpt.appendChild(document.createTextNode(q));
-    },500);
+    },outpt.innerHTML == "" ? 10 : 500);
 }
       
     </script>
